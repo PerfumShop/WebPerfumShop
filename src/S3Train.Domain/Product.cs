@@ -1,16 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace S3Train.Domain
 {
     public class Product : EntityBase
     {
-        public Guid CategoryId { get; set; }
         public string Name { get; set; }
-        public string Summary { get; set; }
-        public decimal Price { get; set; }
-        public string ImagePath { get; set; }
-        public int? Rating { get; set; }
-
-        public virtual Category Category { get; set; }
+        public string Description { get; set; }
+        public virtual Vendor Vendor { get; set; }
+        public virtual Brand Brand { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
+        public virtual ICollection<ProductVariation> ProductVariations { get; set; }
     }
 }

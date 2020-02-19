@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace S3Train.Domain
 {
-   public class Category:EntityBase
+    public class Brand: EntityBase
     {
-        public Guid? ParentId { get; set; }
         public string Name { get; set; }
         public string Summary { get; set; }
-        public virtual Category ParentCategory { get; set; }
-        public virtual ICollection<Category> ChildCategories { get; set; }
+        public string Logo { get; set; }
+
         public virtual ICollection<Product> Products { get; set; }
     }
 }
