@@ -10,6 +10,7 @@ namespace S3Train.Domain
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Vendor> Vendors { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -20,6 +21,8 @@ namespace S3Train.Domain
         public DbSet <ProductVariation> ProductVariations { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<ProductAdvertisement> ProductAdvertisements { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
@@ -91,6 +94,14 @@ namespace S3Train.Domain
             modelBuilder.Entity<Order>().Property(x => x.DeliveryPhone).HasMaxLength(12).IsRequired();
             modelBuilder.Entity<Order>().Property(x => x.OrderDate).IsRequired();
             modelBuilder.Entity<Order>().HasOptional(x => x.ShoppingCart).WithRequired(a => a.Order);
+
+            modelBuilder.Entity<ProductAdvertisement>().ToTable("ProductAdvertisement");
+            modelBuilder.Entity<ProductAdvertisement>().Property(x => x.ImagePath).HasMaxLength(200).IsRequired();
+            modelBuilder.Entity<ProductAdvertisement>().Property(x => x.EventUrl).HasMaxLength(50).IsRequired();
+            modelBuilder.Entity<ProductAdvertisement>().Property(x => x.EventUrlCaption).HasMaxLength(10).IsOptional();
+            modelBuilder.Entity<ProductAdvertisement>().Property(x => x.Title).HasMaxLength(100).IsOptional();
+            modelBuilder.Entity<ProductAdvertisement>().Property(x => x.Description).HasMaxLength(500).IsOptional();
+
         }
     }
 }

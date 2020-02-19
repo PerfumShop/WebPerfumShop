@@ -63,6 +63,7 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="ProductAdvertisement.cs" />
     <Compile Include="ProductImage.cs" />
     <Compile Include="ProductVariation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

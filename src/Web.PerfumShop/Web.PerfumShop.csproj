@@ -177,6 +177,10 @@
     <Compile Include="Migrations\202002190347188_InitDatabase.Designer.cs">
       <DependentUpon>202002190347188_InitDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002190901221_AddProductAdvertisement.cs" />
+    <Compile Include="Migrations\202002190901221_AddProductAdvertisement.Designer.cs">
+      <DependentUpon>202002190901221_AddProductAdvertisement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -317,12 +321,15 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout1.cshtml" />
     <Content Include="Views\Home\Checkout.cshtml" />
+    <Content Include="Views\Shared\_LoginModalPartial.cshtml" />
     <None Include="Web.LocalConnectionStrings.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Shared\Admin\" />
+    <Folder Include="Views\Shared\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -354,6 +361,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202002190347188_InitDatabase.resx">
       <DependentUpon>202002190347188_InitDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190901221_AddProductAdvertisement.resx">
+      <DependentUpon>202002190901221_AddProductAdvertisement.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
