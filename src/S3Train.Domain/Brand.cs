@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace S3Train.Domain
 {
-    public class Brand: EntityBase
+    public class Brand : EntityBase
     {
         public string Name { get; set; }
         public string Summary { get; set; }

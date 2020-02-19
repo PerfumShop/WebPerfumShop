@@ -69,11 +69,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Contract\IBannerService.cs" />
+    <Compile Include="Contract\IBrandService.cs" />
+    <Compile Include="Contract\ICategoryService.cs" />
+    <Compile Include="Contract\IOrderService.cs" />
+    <Compile Include="Contract\IProductImageService.cs" />
     <Compile Include="Contract\IProductService.cs" />
+    <Compile Include="Contract\IProductVariationService.cs" />
+    <Compile Include="Contract\IShoppingCartDetailService.cs" />
+    <Compile Include="Contract\IShoppingCartService.cs" />
+    <Compile Include="Contract\IVendorService.cs" />
     <Compile Include="GenenicServiceBase.cs" />
     <Compile Include="IGenenicServiceBase.cs" />
+    <Compile Include="Service\BannerService.cs" />
+    <Compile Include="Service\BrandService.cs" />
+    <Compile Include="Service\CategoryService.cs" />
+    <Compile Include="Service\OrderService.cs" />
+    <Compile Include="Service\ProductImageService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ProductVariationService.cs" />
+    <Compile Include="Service\ShoppingCartDetailService.cs" />
+    <Compile Include="Service\ShoppingCartService.cs" />
+    <Compile Include="Service\VendorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\S3Train.Core\S3Train.Core.csproj">

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace S3Train.Domain
 {
-   public class Category:EntityBase
+   public class Category : EntityBase
     {
         public Guid? ParentId { get; set; }
         public string Name { get; set; }
