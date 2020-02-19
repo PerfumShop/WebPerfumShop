@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using S3Train.Domain;
 using Web.PerfumShop.Models;
 
 namespace Web.PerfumShop.Controllers

@@ -68,10 +68,10 @@ namespace S3Train.Domain
             modelBuilder.Entity<ProductVariation>().Property(p => p.DiscountPrice).IsRequired();
             modelBuilder.Entity<ProductVariation>().HasMany(p => p.ProductImage).WithRequired(s => s.ProductVariation);
 
-            modelBuilder.Entity<ProductImage>().ToTable("ProductVariation");
+            modelBuilder.Entity<ProductImage>().ToTable("ProductImage");
             modelBuilder.Entity<ProductImage>().Property(x => x.ImagePath).HasMaxLength(100).IsRequired();
+
             modelBuilder.Entity<Banner>().ToTable("Banner");
-           
             modelBuilder.Entity<Banner>().Property(x => x.Image).HasMaxLength(30);
             modelBuilder.Entity<Banner>().Property(p => p.Link).HasMaxLength(100);
 
