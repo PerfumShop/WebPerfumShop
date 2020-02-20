@@ -18,12 +18,6 @@ namespace Web.PerfumShop
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-
-            routes.MapRoute(
-                name: "Admin",
-                url: "HomeAdmin/{action}/{id}",
-                defaults: new { controller = "HomeAdmin", action = "Index", id = UrlParameter.Optional }
-            );
         }
     }
 }

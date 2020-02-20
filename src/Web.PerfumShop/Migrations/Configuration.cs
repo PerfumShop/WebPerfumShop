@@ -2,6 +2,7 @@ namespace Web.PerfumShop.Migrations
 {
     using S3Train.Domain;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -19,6 +20,7 @@ namespace Web.PerfumShop.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+            
         }
     }
 }
