@@ -22,7 +22,7 @@ namespace S3Train
 
         protected DbSet<T> EntityDbSet => DbContext.Set<T>();
 
-        protected string errorMessage = string.Empty;
+        public string errorMessage = string.Empty;
 
         protected GenenicServiceBase(ApplicationDbContext dbContext)
         {
@@ -35,7 +35,7 @@ namespace S3Train
         /// <returns></returns>
         public List<T> SelectAll()
         {
-            return EntityDbSet.ToList();
+            return this.EntityDbSet.ToList();
         }
 
         /// <summary>
