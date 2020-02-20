@@ -8,6 +8,7 @@ namespace S3Train.Domain
 {
     public class ProductVariation:EntityBase
     {
+        public Guid Product_Id { get; set; }
         public string SKU { get; set; }
         public string Volume { get; set; }
         public decimal StockQuantity { get; set; }

@@ -8,6 +8,7 @@ namespace S3Train.Domain
 {
     public class Order:EntityBase
     {
+        public Guid ShoppingCart_Id { get; set; }
         public string DeliveryName { get; set; }
         public string DeliveryAddress { get; set; }
         public string DeliveryPhone { get; set; }
