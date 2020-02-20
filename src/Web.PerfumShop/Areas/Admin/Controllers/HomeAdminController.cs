@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Web.PerfumShop.Controllers.Admin
+namespace Web.PerfumShop.Areas.Admin.Controllers
 {
     public class HomeAdminController : Controller
     {
-        // GET: HomeAdmin
+        // GET: Admin/HomeAdmin
         public ActionResult Index()
         {
             return View();
