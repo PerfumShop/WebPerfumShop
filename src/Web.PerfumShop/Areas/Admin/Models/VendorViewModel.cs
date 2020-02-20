@@ -14,4 +14,9 @@ namespace Web.PerfumShop.Areas.Admin.Models
         public string PhoneNumber { get; set; }
         public bool IsActive { get; set; }
     }
+
+    public class VendorList
+    {
+        public IList<VendorViewModel> VendorViewModels { get; set; }
+    }
 }

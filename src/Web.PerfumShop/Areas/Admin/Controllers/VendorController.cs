@@ -1,5 +1,6 @@
 ﻿using S3Train.Contract;
 using S3Train.Domain;
+using S3Train.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace Web.PerfumShop.Areas.Admin.Controllers
     {
         private readonly IVendorService _vendorService;
 
+        public VendorController() { }
+
         public VendorController(IVendorService vendorService)
         {
             _vendorService = vendorService;
@@ -21,7 +24,11 @@ namespace Web.PerfumShop.Areas.Admin.Controllers
         // GET: Vendor
         public ActionResult VendorHome()
         {
-            var models = GetVendors(_vendorService.SelectAll());
+            var vendors = _vendorService.SelectAll();
+            var models = new VendorList
+            {
+                VendorViewModels = GetVendors(vendors)
+            };
             return View(models);
         }
 
